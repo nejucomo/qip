@@ -4,7 +4,7 @@ import os
 from setuptools import setup, find_packages
 
 cmdclass = {}
-if os.path.isfile('PKG-INFO'):
+if not os.path.isfile('PKG-INFO'):
     # We are not in an sdist, so incorporate qip:
     import qip
     cmdclass.update(qip.get_commands())
