@@ -38,10 +38,10 @@ class QipDocTestCommand (QipCommandBase):
     """Run doctests."""
 
     def run(self):
-        [pkgname] = self.distribution.packages
-        for basedir, _, files in os.walk(pkgname):
-            for fname in sorted(files):
-                path = os.path.join(basedir, fname)
+        for pkgname in sorted(self.distribution.packages):
+            pkgpath = pkgname.replace('.', os.path.sep)
+            for fname in sorted(os.listdir(pkgpath)):
+                path = os.path.join(pkgpath, fname)
                 (modpart, ext) = os.path.splitext(path)
                 if ext == '.py':
                     modname = modpart.replace(os.path.sep, '.')
