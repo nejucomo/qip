@@ -1,4 +1,5 @@
-import subprocess
+import os
+import doctest
 
 from setuptools.command import test
 
@@ -34,10 +35,27 @@ class QipFlake8Command (Flake8Command):
 
 
 class QipDocTestCommand (QipCommandBase):
-    """Run pyflakes."""
+    """Run doctests."""
 
     def run(self):
-        pkgname = 'FIXME'
-        status = subprocess.call(['pyflakes', pkgname])
-        if status != 0:
-            raise SystemExit(status)
+        [pkgname] = self.distribution.packages
+        for basedir, _, files in os.walk(pkgname):
+            for fname in sorted(files):
+                path = os.path.join(basedir, fname)
+                (modpart, ext) = os.path.splitext(path)
+                if ext == '.py':
+                    modname = modpart.replace(os.path.sep, '.')
+                    mod = self._import_leaf_mod(modname)
+                    print '=== doctests for %r ===' % (modname,)
+                    doctest.testmod(
+                        mod,
+                        name=modname,
+                        report=True,
+                        verbose=False)
+
+    @staticmethod
+    def _import_leaf_mod(modname):
+        mod = __import__(modname)
+        for modpart in modname.split('.')[1:]:
+            mod = getattr(mod, modpart)
+        return mod
