@@ -9,6 +9,8 @@ if not os.path.isfile('PKG-INFO'):
     import qip
     cmdclass.update(qip.get_commands())
 
+# Else, we are in an unpacked sdist, so delegate to normal setuptools.
+
 
 setup(name = 'qip',
       description = 'Quality Integrated Packaging - PEP440, pyflakes, style checking, unittesting, sdist install testing.',
