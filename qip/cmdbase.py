@@ -1,3 +1,6 @@
+from setuptools import Command
+
+
 class DescriptionFromDocProperty (property):
     def __get__(self, _, cls):
         return cls.__doc__

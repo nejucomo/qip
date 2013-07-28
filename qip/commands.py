@@ -2,9 +2,8 @@ import subprocess
 
 from setuptools.command import test
 
-from flake8.main import Flake8Command
-
-from .cmdutils import QipCommandBase
+from .cmdbase import QipCommandBase
+from .devdeps import Flake8Command
 
 
 def get_commands():
