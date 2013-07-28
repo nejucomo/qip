@@ -1,6 +1,7 @@
-"""Import all development dependencies in one place to handle import errors consistently."""
+"""Import all dev dependencies here; handle import errors consistently."""
 
 __all__ = ['Flake8Command']
+
 
 _RequirementsMessage = """Missing qip dependencies.
 
@@ -20,4 +21,3 @@ try:
     from flake8.main import Flake8Command
 except ImportError:
     raise SystemExit(_RequirementsMessage)
-

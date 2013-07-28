@@ -7,7 +7,7 @@ class DescriptionFromDocProperty (property):
 
 
 class QipCommandBase (Command):
-    """Utility for no options and delegate description to the subclass __doc__."""
+    """no options and delegate description to the subclass __doc__."""
 
     description = DescriptionFromDocProperty()
 
@@ -18,6 +18,3 @@ class QipCommandBase (Command):
 
     def finalize_options(self):
         pass
-
-
-
