@@ -2,9 +2,9 @@ import os
 import doctest
 
 from setuptools.command import test
+from flake8.main import Flake8Command
 
 from .cmdbase import QipCommandBase
-from .devdeps import Flake8Command
 
 
 def get_commands():

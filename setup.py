@@ -20,6 +20,6 @@ setup(name = 'qip',
       author = 'Nathan Wilcox',
       author_email = 'nejucomo@gmail.com',
       packages = find_packages(),
-      install_requires = [],
+      install_requires = ['flake8 >= 2.0'],
       cmdclass = cmdclass,
       )
