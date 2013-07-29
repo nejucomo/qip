@@ -1,19 +1,9 @@
 import os
 import doctest
 
-from setuptools.command import test
 from flake8.main import Flake8Command
 
 from .base import QipCommandBase
-
-
-def get_commands():
-    return {
-        'test': QipTestCommand,
-        'test_unit': test.test,
-        'test_flake8': QipFlake8Command,
-        'test_doc': QipDocTestCommand,
-        }
 
 
 class QipTestCommand (QipCommandBase):
