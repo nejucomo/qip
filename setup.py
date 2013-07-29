@@ -21,5 +21,6 @@ setup(name = 'qip',
       author_email = 'nejucomo@gmail.com',
       packages = find_packages(),
       install_requires = ['flake8 >= 2.0'],
+      test_suite = 'qip.tests',
       cmdclass = cmdclass,
       )
