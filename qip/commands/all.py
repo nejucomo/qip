@@ -4,7 +4,7 @@ import doctest
 from setuptools.command import test
 from flake8.main import Flake8Command
 
-from .cmdbase import QipCommandBase
+from .base import QipCommandBase
 
 
 def get_commands():
