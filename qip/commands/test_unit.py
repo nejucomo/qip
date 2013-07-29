@@ -3,7 +3,7 @@ from setuptools.command import test
 from .base import QipCommandBase
 
 
-class QipUnitTestCommand (QipCommandBase):
+class test_unit (QipCommandBase):
     """Run unittests."""
 
     def __init__(self, distribution):

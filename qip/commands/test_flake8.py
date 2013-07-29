@@ -1,7 +1,7 @@
 from flake8.main import Flake8Command
 
 
-class QipFlake8Command (Flake8Command):
+class test_flake8 (Flake8Command):
     def run(self):
         try:
             Flake8Command.run(self)

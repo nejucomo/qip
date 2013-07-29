@@ -4,7 +4,7 @@ import doctest
 from .base import QipCommandBase
 
 
-class QipDocTestCommand (QipCommandBase):
+class test_doc (QipCommandBase):
     """Run doctests."""
 
     def run(self):

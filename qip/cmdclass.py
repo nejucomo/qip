@@ -1,13 +1,11 @@
-from .commands.test import QipTestCommand
-from .commands.test_unit import QipUnitTestCommand
-from .commands.test_flake8 import QipFlake8Command
-from .commands.test_doc import QipDocTestCommand
+from .commands.test import test
+from .commands.test_unit import test_unit
+from .commands.test_flake8 import test_flake8
+from .commands.test_doc import test_doc
+
+
+QipCommands = [test, test_unit, test_flake8, test_doc]
 
 
 def get_commands():
-    return {
-        'test': QipTestCommand,
-        'test_unit': QipUnitTestCommand,
-        'test_flake8': QipFlake8Command,
-        'test_doc': QipDocTestCommand,
-        }
+    return dict((cls.__name__, cls) for cls in QipCommands)

@@ -1,7 +1,7 @@
 from .base import QipCommandBase
 
 
-class QipTestCommand (QipCommandBase):
+class test (QipCommandBase):
     """Run all Quality-Integrated-Packaging tests."""
 
     def run(self):
