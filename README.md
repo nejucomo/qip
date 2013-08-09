@@ -24,15 +24,15 @@ By adding a [minimal fragment](#Getting-Started) to your python project's
    from an sdist.
  * No dependency on `qip` for `sdist` or other distribution formats.
  * Ensure your package is signed with the proper `GPG`
-   key. [1](#footnote-1) [2](#footnote-2)
+   key. [¹](#footnote-1) [²](#footnote-2)
  * Further quality checks on `sdist` not caught by the standard
    `setuptools`, such as:
    + Fail on `MANIFEST.in` patterns which match no existing files.
 
-<a id="footnote-1" href="#footnote-1">1.</a> There is no good signature
+<a id="footnote-1" href="#footnote-1">¹</a> There is no good signature
 verification scheme for python packaging at the moment.
 
-<a id="footnote-2" href="#footnote-2">2.</a> Be the first on your block
+<a id="footnote-2" href="#footnote-2">²</a> Be the first on your block
 to sign all of your packages!
 
 The Reality
