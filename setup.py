@@ -13,7 +13,7 @@ if not os.path.isfile('PKG-INFO'):
 
 
 setup(name = 'qip',
-      description = 'Quality Integrated Packaging - PEP440, pyflakes, style checking, unittesting, sdist install testing.',
+      description = 'Quality Integrated Packaging - PEP440, pyflakes, style checking, unittest branch coverage, sdist installation testing.',
       url = 'https://github.com/nejucomo/qip',
       license = 'GPLv3',
       version = '0.1.dev0',
