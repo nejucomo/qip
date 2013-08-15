@@ -31,7 +31,7 @@ class test_unit (QipCommandBase):
             print "Created 'dist' directory."
 
         covdata = os.path.join('dist', 'coverage.data')
-        covreport = os.path.join('dist', 'coverate_html')
+        covreport = os.path.join('dist', 'coverage_html')
 
         print 'Recording test coverage in %r' % (covdata,)
         cov = coverage(
