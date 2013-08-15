@@ -20,7 +20,7 @@ setup(name = 'qip',
       author = 'Nathan Wilcox',
       author_email = 'nejucomo@gmail.com',
       packages = find_packages(),
-      install_requires = ['flake8 >= 2.0'],
+      install_requires = ['flake8 >= 2.0', 'coverage >= 3.6'],
       test_suite = 'qip.tests',
       cmdclass = cmdclass,
       )

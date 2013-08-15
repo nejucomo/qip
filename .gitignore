@@ -1,3 +1,4 @@
 *.pyc
 
 qip.egg-info/
+dist/
